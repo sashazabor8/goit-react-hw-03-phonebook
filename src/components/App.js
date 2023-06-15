@@ -42,6 +42,7 @@ class App extends Component {
   };
 
   getFilteredList = () => {
+    if (this.state.contacts.length === 0) return [];
     const { filter, contacts } = this.state;
 
     const optimizedFilter = filter.toLocaleLowerCase().trim();
